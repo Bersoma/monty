@@ -1,6 +1,31 @@
-# C - Stacks and Queue
-## The Monty language
-Monty 0.98 is a scripting language that is first compiled into Monty byte codes (Just like Python). It relies on a unique stack, with specific instructions to manipulate it. The goal of this project is to create an interpreter for Monty ByteCodes files.
+# 0x18. C - Stacks, Queues - LIFO, FIFO
 
-## Monty byte code files
-Files containing Monty byte codes usually have the .m extension. Most of the industry uses this standard but it is not required by the specification of the language. There is not more than one instruction per line. There can be any number of spaces before or after the opcode and its argument:
+## Description
+
+This Holberton School project is a custom ByteCode interpreter, coded in C.
+Compilation:
+```gcc -Wall -Werror -Wextra -pedantic *.c -o monty```
+Usage:
+```./monty byte_file.m```
+
+The program reads from the file "byte_file.m" that contains one instruction per line.
+It then calls the right function to modify a stack according to the instruction.
+It prints custom error messages if the instruction is wrong.
+
+## Table of contents
+
+File | Description
+---- | -----------
+[main.c](./main.c) | entry point of the program
+[monty.h](./monty.h) | main header file
+[lists.h](./lists.h) | header file for the lists functions
+[get_func.c](./get_func.c) | function that picks the right function for the instruction
+[handler_funcs1.c](./handler_funcs1.c) | handler functions for the instructions
+[handler_funcs2.c](./handler_funcs2.c) | handler functions for the instructions
+[handler_funcs3.c](./handler_funcs3.c) | handler functions for the instructions
+[list_funcs1.c](./list_funcs1.c) | doubly linked list functions
+[list_funcs2.c](./list_funcs2.c) | doubly linked list functions
+[strtow.c](./strtow.c) | string tokenizing functions
+[free.c](./free.c) | memory handling functions
+[char.c](./char.c) | handler functions for ascii instructions
+[bf](./bf) | Advanced tasks: Brainf*ck programs
